@@ -1,4 +1,4 @@
-# Experiment 01: Headless Mode
+# Experiment 05: Headless Mode
 
 ## Goal
 Learn to run Claude Code programmatically via `claude -p` (headless mode). This is the foundation for all multi-agent patterns — you can't orchestrate agents if you can't run them non-interactively.
@@ -37,7 +37,7 @@ claude -p "Review this code for bugs and edge cases: $(cat temp_code.ts)"
 ### Exercise 3: Parallel execution
 ```bash
 # Run 3 agents simultaneously
-claude -p "Analyze experiments/01-headless-mode/ for code quality" &
+claude -p "Analyze experiments/05-headless-mode/ for code quality" &
 claude -p "Check if all experiments have README files" &
 claude -p "List any TODO comments in the codebase" &
 wait

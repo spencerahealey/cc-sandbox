@@ -1,10 +1,10 @@
-# Experiment 04: Hooks
+# Experiment 08: Hooks
 
 ## Goal
 Learn to use Claude Code hooks — deterministic shell commands that fire at specific points in Claude's workflow. Hooks are the "must-do" rules vs CLAUDE.md's "should-do" suggestions.
 
 ## Prerequisites
-- Complete Experiments 01-03
+- Complete Experiments 05-07
 - Understanding of shell scripting basics
 
 ## Hook Events (8 total)

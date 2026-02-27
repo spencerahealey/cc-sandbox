@@ -1,10 +1,10 @@
-# Experiment 05: Claude Code SDK — Building Real Agents
+# Experiment 09: Claude Code SDK — Building Real Agents
 
 ## Goal
 Use the Claude Code SDK (Python or TypeScript) to build programmatic agents that leverage Claude Code's full toolset — file I/O, bash, web fetch — without reimplementing everything yourself.
 
 ## Prerequisites
-- Complete Experiments 01-04
+- Complete Experiments 05-08
 - Python 3.10+ or Node.js 18+
 
 ## What is the Claude Code SDK?
@@ -79,7 +79,7 @@ Build an agent that runs on a schedule (or manually) to:
 - Generate a daily status report in `logs/`
 
 ### Exercise 5: MCP + SDK combo
-Connect your MCP server from Experiment 03 to an SDK-powered agent. The agent uses your custom MCP tools to read/write project state.
+Connect your MCP server from Experiment 07 to an SDK-powered agent. The agent uses your custom MCP tools to read/write project state.
 
 ## Architecture: When to Use What
 

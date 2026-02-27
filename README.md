@@ -10,15 +10,20 @@ You use Claude Code (or want to) and you've hit the ceiling on basic prompting. 
 
 ## What's inside
 
-**5 experiments**, ordered from foundational to advanced. Each has a README with explanation, copy-paste exercises, and a checklist so you know when you've actually learned the thing.
+**10 experiments**, ordered from foundational to advanced. Each has a README with explanation, copy-paste exercises, and a checklist so you know when you've actually learned the thing.
 
 | # | Experiment | What You'll Learn | Time |
 |---|-----------|-------------------|------|
-| 01 | [Headless Mode](experiments/01-headless-mode/) | Run Claude Code programmatically, chain agents, parallelize work | 30 min |
-| 02 | [Agent Teams](experiments/02-agent-teams/) | Coordinate multiple Claude instances with task DAGs and messaging | 1-2 hrs |
-| 03 | [MCP Servers](experiments/03-mcp-servers/) | Build custom tool servers that Claude Code can discover and use | 2-3 hrs |
-| 04 | [Hooks](experiments/04-hooks/) | Deterministic automation — auto-lint, test gates, notifications | 1 hr |
-| 05 | [SDK Agents](experiments/05-sdk-agents/) | Build production agents with the Claude Code SDK | 2-3 hrs |
+| 00 | [Getting Started](experiments/00-getting-started/) | Install, authenticate, first prompts, essential commands | 20 min |
+| 01 | [CLAUDE.md Mastery](experiments/01-claude-md-mastery/) | Write great CLAUDE.md files — project, user, and subdirectory level | 45 min |
+| 02 | [Context & Subagents](experiments/02-context-and-subagents/) | Context management, /compact, /clear, auto-memory, Tasks, custom agents | 1 hr |
+| 03 | [Skills](experiments/03-skills/) | Build custom skills — SKILL.md format, auto-discovery, supporting files | 1 hr |
+| 04 | [Custom Agents](experiments/04-custom-agents/) | Build agents in .claude/agents/ — auto-delegation, tool scoping, worktrees | 1-2 hrs |
+| 05 | [Headless Mode](experiments/05-headless-mode/) | Run Claude Code programmatically, chain agents, parallelize work | 30 min |
+| 06 | [Agent Teams](experiments/06-agent-teams/) | Coordinate multiple Claude instances with shared Tasks and messaging | 1-2 hrs |
+| 07 | [MCP Servers](experiments/07-mcp-servers/) | Build custom tool servers that Claude Code can discover and use | 2-3 hrs |
+| 08 | [Hooks](experiments/08-hooks/) | Deterministic automation — auto-lint, test gates, notifications | 1 hr |
+| 09 | [SDK Agents](experiments/09-sdk-agents/) | Build production agents with the Claude Code SDK | 2-3 hrs |
 
 **3 custom slash commands** you can use immediately:
 - `/new-experiment <name>` — scaffold a new experiment folder
@@ -50,18 +55,17 @@ Open Claude Code in the repo:
 claude
 ```
 
-Claude automatically reads the CLAUDE.md and knows the project. Start with Experiment 01:
+Claude automatically reads the CLAUDE.md and knows the project. Start with Experiment 00:
 
 ```bash
-cd experiments/01-headless-mode
-chmod +x run.sh
-./run.sh
+cd experiments/00-getting-started
+cat README.md
 ```
 
 Or use the built-in learning command inside Claude Code:
 
 ```
-/learn headless mode
+/learn getting started
 ```
 
 ## How to use this repo

@@ -1,10 +1,10 @@
-# Experiment 03: Build Your Own MCP Server
+# Experiment 07: Build Your Own MCP Server
 
 ## Goal
 Build a custom MCP (Model Context Protocol) server from scratch and connect it to Claude Code. This is directly applicable to your Healey AI work — MCP is how you'll bridge context between tools.
 
 ## Prerequisites
-- Complete Experiments 01-02
+- Complete Experiments 05-06
 - Node.js 18+
 - `@modelcontextprotocol/sdk` package
 
@@ -26,7 +26,7 @@ MCP is a protocol that lets AI tools (Claude Code, Claude Desktop, etc.) connect
 
 ## Setup
 ```bash
-cd experiments/03-mcp-servers
+cd experiments/07-mcp-servers
 npm init -y
 npm install @modelcontextprotocol/sdk zod
 npm install -D typescript @types/node tsx
@@ -47,7 +47,7 @@ npx tsx servers/hello-mcp/index.ts
 # "mcpServers": {
 #   "hello-mcp": {
 #     "command": "npx",
-#     "args": ["tsx", "experiments/03-mcp-servers/servers/hello-mcp/index.ts"]
+#     "args": ["tsx", "experiments/07-mcp-servers/servers/hello-mcp/index.ts"]
 #   }
 # }
 ```

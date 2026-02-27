@@ -8,11 +8,16 @@ A hands-on experimentation workspace for learning and testing Claude Code featur
 cc-sandbox/
 ├── CLAUDE.md                    # You're reading it
 ├── experiments/                 # Individual experiments (each has its own README)
-│   ├── 01-headless-mode/        # Running Claude Code programmatically
-│   ├── 02-agent-teams/          # Multi-agent orchestration
-│   ├── 03-mcp-servers/          # Building custom MCP servers
-│   ├── 04-hooks/                # Pre/post tool hooks
-│   └── 05-sdk-agents/           # Claude Code SDK for building agents
+│   ├── 00-getting-started/      # Install, authenticate, first prompts
+│   ├── 01-claude-md-mastery/    # Writing great CLAUDE.md files
+│   ├── 02-context-and-subagents/ # Context management and subagents
+│   ├── 03-skills/               # Building custom skills
+│   ├── 04-custom-agents/        # Custom Agents (.claude/agents/)
+│   ├── 05-headless-mode/        # Running Claude Code programmatically
+│   ├── 06-agent-teams/          # Multi-agent orchestration
+│   ├── 07-mcp-servers/          # Building custom MCP servers
+│   ├── 08-hooks/                # Pre/post tool hooks
+│   └── 09-sdk-agents/           # Claude Code SDK for building agents
 ├── .claude/
 │   ├── settings.local.json      # Permissive settings for sandbox
 │   ├── skills/                  # Custom skills (auto-discovered)

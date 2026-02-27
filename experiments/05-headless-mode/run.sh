@@ -2,7 +2,7 @@
 # Headless Mode Experiments
 # Run: chmod +x run.sh && ./run.sh
 
-echo "=== Experiment 01: Headless Mode ==="
+echo "=== Experiment 05: Headless Mode ==="
 echo ""
 
 # Exercise 1: Basic headless
@@ -45,4 +45,4 @@ cat /tmp/cc-agent3.txt
 rm -f /tmp/cc-agent1.txt /tmp/cc-agent2.txt /tmp/cc-agent3.txt
 
 echo ""
-echo "=== Experiment 01 Complete ==="
+echo "=== Experiment 05 Complete ==="

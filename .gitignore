@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+/tmp/
+.DS_Store
+
+# Claude Code auto-gitignores this, but just in case
+.claude/settings.local.json

@@ -44,7 +44,7 @@ You use Claude Code (or want to) and you've hit the ceiling on basic prompting. 
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/cc-sandbox.git
+git clone https://github.com/spencerahealey/cc-sandbox.git
 cd cc-sandbox
 npm install
 ```

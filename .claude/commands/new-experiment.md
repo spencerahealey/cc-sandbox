@@ -1,5 +1,5 @@
 ---
-description: Scaffold a new experiment folder with README, starter code, and test file
+description: Scaffold a new experiment folder with README and starter content
 allowed-tools: Read, Write, Bash
 ---
 
@@ -14,20 +14,31 @@ Follow these steps:
 # Experiment XX: <Name>
 
 ## Goal
-What are we testing?
+What you'll build in this experiment (2-3 sentences, outcome-focused).
 
-## Setup
-How to run this experiment.
+## Time Estimate
+~X minutes/hours
+
+---
+
+## [Content sections with practical examples]
+
+---
+
+## Exercises
+
+### Exercise 1: [Name]
+[Working exercise that produces output]
+
+---
 
 ## Key Learnings
-- [ ] Document what worked
-- [ ] Document what didn't
-- [ ] Note any gotchas
+- [ ] Built [specific working thing]
+- [ ] Tested [specific working thing]
+- [ ] Applied [pattern] in practice
 
 ## Resources
 - Links to relevant docs
 ```
 
-4. Create a starter `index.ts` file with a basic scaffold relevant to the experiment type
-5. Create a `*.test.ts` file with a placeholder test
-6. Update the root CLAUDE.md project structure if needed
+4. Update the root CLAUDE.md project structure if needed

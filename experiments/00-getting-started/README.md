@@ -1,179 +1,131 @@
-# Experiment 00: Getting Started with Claude Code
+# Experiment 00: Getting Started
 
 ## Goal
-Install Claude Code, authenticate, run your first prompts, and learn the essential commands you'll use every day. By the end, you'll be comfortable navigating Claude Code and ready for the deeper experiments.
 
-## What is Claude Code?
-Claude Code is Anthropic's official CLI tool that puts Claude directly in your terminal. Unlike the web chat, it can read your files, run commands, edit code, and work with your entire codebase. Think of it as a senior developer pair-programming with you — one that understands your project context.
+Install Claude Code, build your first project with it, and learn the essential commands. In 20 minutes, you'll go from zero to having a working website you built entirely by prompting.
 
-## Installation
+## Time Estimate
 
-### Step 1: Install Claude Code
+~20 minutes
+
+---
+
+## Step 1: Install Claude Code
+
 ```bash
-# Using npm (recommended)
 npm install -g @anthropic-ai/claude-code
+```
 
-# Verify installation
+Verify it's installed:
+
+```bash
 claude --version
 ```
 
-### Step 2: Authenticate
+### Authenticate
+
+Run `claude` in any directory. On first launch, it walks you through authentication. You need one of:
+
+- **Claude Pro/Max subscription** — authenticates via your Anthropic account
+- **API key** — set `ANTHROPIC_API_KEY` in your environment
+
+Once authenticated, you'll see the Claude Code prompt. You're in.
+
+---
+
+## Step 2: Build Something
+
+Open Claude Code in this repo:
+
 ```bash
-# Start Claude Code — it will prompt you to authenticate
+cd cc-sandbox
 claude
-
-# You'll need one of:
-# - Claude Pro or Max subscription (uses claude.ai OAuth)
-# - Anthropic API key (set ANTHROPIC_API_KEY env var)
 ```
 
-### Step 3: Verify it works
-```bash
-# In this repo, run:
-claude -p "What files are in this repo?"
-```
-
-If you see a list of files, you're good to go.
-
-## Exercises
-
-### Exercise 1: Your first interactive session
-Start Claude Code in this repo and try some basic prompts:
-
-```bash
-# Start interactive mode
-claude
-
-# Try these prompts (paste them one at a time):
-```
+Now tell Claude to build a project:
 
 ```
-What is this repo about? Read the CLAUDE.md and summarize it.
+Create a personal landing page at experiments/00-getting-started/my-site/index.html.
+Include my name (use a placeholder), a short bio section, 3 project cards with
+placeholder content, and a contact section. Make it look polished with modern CSS.
+Single HTML file with embedded styles. Dark theme.
 ```
 
-```
-How many experiments are in the experiments/ folder? List them.
-```
+Open the file in your browser. You just built a website by typing a sentence.
+
+Now iterate on it:
 
 ```
-Read shared/utils.ts and explain what it does.
+Add smooth scrolling for navigation links, a gradient background,
+and hover animations on the project cards.
 ```
 
-Type `/clear` when you're done to reset the conversation.
+**This is the core loop:** describe what you want → get it → refine it.
 
-### Exercise 2: Essential commands
-These commands work inside an interactive Claude Code session:
+---
+
+## Step 3: Learn the Essential Commands
+
+Now that you've seen Claude Code in action, here are the commands you'll use regularly:
 
 | Command | What it does |
 |---------|-------------|
 | `/help` | Show all available commands |
-| `/model` | Switch between Claude models (Opus, Sonnet, Haiku) |
-| `/clear` | Clear conversation and start fresh |
-| `/compact` | Compress context to free up the context window |
-| `/status` | Show current session info (model, tokens used, etc.) |
-| `/cost` | Show API usage costs for the session |
-| `/rewind` | Undo code changes by rewinding conversation — essential escape hatch |
-| `/memory` | View and manage auto-memory — Claude automatically saves useful context across sessions |
-| `/copy` | Interactive picker for code blocks in Claude's responses |
-| `/context` | See what's loaded in context and token usage breakdown |
-| `/agents` | List and create custom agents |
+| `/compact` | Summarize the conversation to free up space (use when sessions get long) |
+| `/clear` | Wipe the conversation and start fresh |
+| `/rewind` | Undo Claude's last action (rolls back code changes too) |
+| `/model` | Switch between models (Opus, Sonnet, Haiku) |
+| `/memory` | View what Claude remembers across sessions |
+| `/context` | Show how much of the context window is used |
 
-Try each one now inside an active session:
-```
-/help
-```
-```
-/model
-```
-```
-/status
-```
-```
-/memory
-```
-```
-/context
-```
+You don't need to memorize these. Just know `/help` exists and you can find them anytime.
 
-### Exercise 3: @-file references
-You can reference files directly in your prompts using `@`:
+### @-File References
+
+Load specific files into context without copy-pasting:
 
 ```
-Explain the code in @shared/utils.ts
+@README.md what does this project do?
 ```
 
-```
-Compare @experiments/05-headless-mode/README.md with @experiments/08-hooks/README.md — what's the difficulty difference?
-```
+You can reference multiple files:
 
 ```
-What dependencies does @package.json list?
+@CLAUDE.md @README.md how are these different?
 ```
 
-### Exercise 4: Headless mode (one-shot prompts)
-Run Claude without the interactive session using `-p`:
+### Picking Up Where You Left Off
+
+Close Claude Code and come back later:
 
 ```bash
-# One-shot prompt
-claude -p "Count the lines of code in this repo"
-
-# Pipe content to Claude
-cat README.md | claude -p "Summarize this in 3 bullet points"
-
-# Save output to a file
-claude -p "Generate a TypeScript hello world function" > /tmp/hello.ts
+claude --continue    # Resume the most recent session
+claude --resume      # Pick from a list of recent sessions
 ```
 
-### Exercise 5: Up-arrow history and session resume
-```bash
-# Start a session
-claude
+---
 
-# Type a prompt, get a response, then press up-arrow to recall your last prompt
-# Up-arrow also navigates past session history — try it to see previous prompts
+## Step 4: Try the Commands
 
-# Exit with Ctrl+C or type /exit
+Now practice what you just learned:
 
-# Resume the LAST session (picks up where you left off):
-claude --continue
+1. **Check context usage:** `/context` — see how much space the conversation is using
+2. **Compact:** `/compact` — watch the token count drop
+3. **Use @-references:** `@experiments/00-getting-started/README.md how many exercises are in this experiment?`
+4. **Check memory:** `/memory` — see what Claude auto-saved about your work
+5. **Close and resume:** Exit with `Ctrl+C`, then run `claude --continue` — ask "what were we working on?"
 
-# Resume a SPECIFIC session by ID:
-claude --resume SESSION_ID
-
-# Tip: --continue is "give me the last one", --resume is "give me this specific one"
-
-# Or start fresh:
-claude
-```
-
-### Exercise 6: Multi-turn conversation
-Have a back-and-forth conversation to see how Claude retains context:
-
-```
-Create a simple TypeScript function called greet that takes a name and returns a greeting string.
-```
-
-```
-Now add a parameter for the language (english, spanish, french) with english as default.
-```
-
-```
-Write a test for this function using Jest.
-```
-
-Notice how Claude remembers the function from the first prompt and builds on it.
+---
 
 ## Key Learnings
+
 - [ ] Installed Claude Code and authenticated
-- [ ] Can start interactive sessions with `claude`
-- [ ] Know the essential commands: `/help`, `/model`, `/clear`, `/compact`, `/status`, `/rewind`, `/memory`, `/copy`, `/context`, `/agents`
-- [ ] Can reference files with `@filename` in prompts
-- [ ] Can run one-shot prompts with `claude -p`
-- [ ] Understand `--continue` (last session) vs `--resume` (specific session) for session management
-- [ ] Know up-arrow navigates prompt history across sessions
-- [ ] Comfortable with multi-turn conversations
+- [ ] Built a landing page entirely by prompting
+- [ ] Iterated on the project with follow-up prompts
+- [ ] Used `/compact` and `/context` to manage the conversation
+- [ ] Closed and resumed a session with `--continue`
 
 ## Resources
-- [Claude Code overview](https://docs.anthropic.com/en/docs/claude-code/overview)
-- [Claude Code quickstart](https://docs.anthropic.com/en/docs/claude-code/quickstart)
-- [CLI reference](https://docs.anthropic.com/en/docs/claude-code/cli-reference)
+
+- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
+- [Claude Code CLI Reference](https://docs.anthropic.com/en/docs/claude-code/cli-usage)

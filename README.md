@@ -1,97 +1,82 @@
-# cc-sandbox 🧪
+# cc-sandbox
 
-A hands-on playground for learning Claude Code's most powerful features — multi-agent orchestration, custom MCP servers, hooks, skills, and the SDK.
+10 hands-on experiments that take you from installing Claude Code to building real multi-agent workflows. Every experiment ends with something working — a real project, tool, or workflow you built by prompting.
 
-Most people use Claude Code like a chatbot in their terminal. This repo teaches you to use it like a platform.
+**No experience with Claude Code required.** Experiment 00 starts with installation. By the end, you'll be orchestrating teams of AI agents.
+
+## What is Claude Code?
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is an AI assistant that lives in your terminal. You describe what you want in plain English and it builds it — reading files, writing code, running commands, and iterating until things work. Think of it as a developer that works for you, right from the command line.
+
+This repo teaches you to go way beyond basic prompting.
 
 ## Who is this for?
 
-You use Claude Code (or want to) and you've hit the ceiling on basic prompting. You want to learn headless mode, agent teams, hooks, MCP servers, and the SDK — but the docs are scattered and there's no structured path. This is that path.
+Anyone who wants to build things with Claude Code. Maybe you're a vibe coder who builds apps by describing what you want. Maybe you're an engineer exploring AI-assisted workflows. Maybe you just installed Claude Code yesterday and want a structured path to actually learn it. You don't need to be a software engineer — you just need a terminal and curiosity.
 
 ## What's inside
 
-**10 experiments**, ordered from foundational to advanced. Each has a README with explanation, copy-paste exercises, and a checklist so you know when you've actually learned the thing.
+**10 experiments**, ordered from beginner to advanced. Each has a README with explanation, hands-on exercises that build real projects, and a checklist so you know when you've actually done the thing.
 
-| # | Experiment | What You'll Learn | Time |
+| # | Experiment | What You'll Build | Time |
 |---|-----------|-------------------|------|
-| 00 | [Getting Started](experiments/00-getting-started/) | Install, authenticate, first prompts, essential commands | 20 min |
-| 01 | [CLAUDE.md Mastery](experiments/01-claude-md-mastery/) | Write great CLAUDE.md files — project, user, and subdirectory level | 45 min |
-| 02 | [Context & Subagents](experiments/02-context-and-subagents/) | Context management, /compact, /clear, auto-memory, Tasks, custom agents | 1 hr |
-| 03 | [Skills](experiments/03-skills/) | Build custom skills — SKILL.md format, auto-discovery, supporting files | 1 hr |
-| 04 | [Custom Agents](experiments/04-custom-agents/) | Build agents in .claude/agents/ — auto-delegation, tool scoping, worktrees | 1-2 hrs |
-| 05 | [Headless Mode](experiments/05-headless-mode/) | Run Claude Code programmatically, chain agents, parallelize work | 30 min |
-| 06 | [Agent Teams](experiments/06-agent-teams/) | Coordinate multiple Claude instances with shared Tasks and messaging | 1-2 hrs |
-| 07 | [MCP Servers](experiments/07-mcp-servers/) | Build custom tool servers that Claude Code can discover and use | 2-3 hrs |
-| 08 | [Hooks](experiments/08-hooks/) | Deterministic automation — auto-lint, test gates, notifications | 1 hr |
-| 09 | [SDK Agents](experiments/09-sdk-agents/) | Build production agents with the Claude Code SDK | 2-3 hrs |
+| 00 | [Getting Started](experiments/00-getting-started/) | A landing page — your first project built entirely by prompting | 20 min |
+| 01 | [Steering Claude Code](experiments/01-steering-claude-code/) | A calculator, bookmark manager, and portfolio — learning to control what Claude does | 45 min |
+| 02 | [Debugging & Fixing](experiments/02-debugging-and-fixing/) | Fix broken projects by pasting errors and iterating | 45 min |
+| 03 | [CLAUDE.md Mastery](experiments/03-claude-md-mastery/) | Project config files that keep Claude informed and up to date | 45 min |
+| 04 | [Context & Memory](experiments/04-context-and-memory/) | A notes app, habit tracker, and recipe book — built across multiple sessions | 1 hr |
+| 05 | [Custom Agents](experiments/05-custom-agents/) | Specialist AI agents that review, audit, and plan — then auto-run when needed | 1-2 hrs |
+| 06 | [Skills & Commands](experiments/06-skills-and-commands/) | Reusable workflows — a project scaffolder, landing page generator | 1-1.5 hrs |
+| 07 | [Connecting External Tools](experiments/07-connecting-external-tools/) | Give Claude access to GitHub, databases, and other services | 45 min |
+| 08 | [Multi-Agent Teams](experiments/08-multi-agent-teams/) | Multiple AI agents working together on a single project | 1-2 hrs |
+| 09 | [Putting It All Together](experiments/09-putting-it-all-together/) | A capstone combining agents, skills, and tools into one workflow | 3-5 hrs |
 
-**3 custom slash commands** you can use immediately:
-- `/new-experiment <name>` — scaffold a new experiment folder
-- `/status` — see your progress across all experiments
-- `/learn <feature>` — get a hands-on tutorial on any Claude Code feature
-
-**1 working MCP server** — a starter server with 3 tools you can connect to Claude Code in minutes.
-
-**1 custom skill** — auto-logs your experiment results and learnings.
-
-## Prerequisites
-
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed and authenticated
-- Claude Pro or Max subscription (or API key)
-- Node.js 18+
-- Basic terminal comfort
+**Total: ~12-17 hours** from first install to multi-agent systems.
 
 ## Quick Start
+
+### 1. Install Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+You need a [Claude Pro/Max subscription](https://claude.ai) or an [Anthropic API key](https://console.anthropic.com).
+
+### 2. Clone this repo and open it
 
 ```bash
 git clone https://github.com/spencerahealey/cc-sandbox.git
 cd cc-sandbox
-npm install
-```
-
-Open Claude Code in the repo:
-
-```bash
 claude
 ```
 
-Claude automatically reads the CLAUDE.md and knows the project. Start with Experiment 00:
+Claude automatically reads the project config and knows what this is.
 
-```bash
-cd experiments/00-getting-started
-cat README.md
-```
-
-Or use the built-in learning command inside Claude Code:
+### 3. Start Experiment 00
 
 ```
-/learn getting started
+Open experiments/00-getting-started/README.md and walk me through it.
 ```
+
+That's it. You're learning Claude Code with Claude Code.
 
 ## How to use this repo
 
-**Option A: Follow the experiments in order.** Each builds on the last. Recommended path.
+**Follow the experiments in order** — each builds on the last. Or jump to what you need. Each experiment is self-contained.
 
-**Option B: Jump to what you need.** Each experiment is self-contained. Already know headless mode? Skip to Agent Teams.
+Every experiment has a "Key Learnings" checklist. Check items off as you go. Run `/status` inside Claude Code to see where you stand.
 
-**Option C: Use it as a reference.** The READMEs contain patterns, architecture diagrams, and gotchas you can come back to.
+## Extras
 
-### Track your progress
-
-Every experiment has a "Key Learnings" checklist. Check items off as you go. Run `/status` inside Claude Code anytime to see where you stand.
-
-## Add your own experiments
-
-```
-# Inside Claude Code
-/new-experiment websocket-mcp-server
-```
-
-Scaffolds a new numbered folder with README, starter code, and test file.
+**3 built-in commands** you can use from day one:
+- `/status` — see your progress across all experiments
+- `/learn <feature>` — get a hands-on tutorial on any Claude Code feature
+- `/new-experiment <name>` — scaffold a new experiment folder
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). The short version: add experiments, improve explanations, fix mistakes. PRs welcome.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Add experiments, improve explanations, fix mistakes. PRs welcome.
 
 ## License
 

@@ -24,8 +24,7 @@ Thanks for wanting to make this better. Here's how.
 
 ## Standards
 
-- TypeScript by default unless the experiment requires something else
-- Every exercise should be runnable as-is (no "fill in the blanks")
+- Every exercise should produce a working output (no "fill in the blanks")
 - Keep READMEs practical — code over theory
 - Test your changes by actually running them in Claude Code
 

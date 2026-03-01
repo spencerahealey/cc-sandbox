@@ -40,21 +40,6 @@ From first install to multi-agent workflows — 10 hands-on experiments that tea
 
 **Total: ~12-17 hours** from first install to multi-agent systems.
 
-| # | Experiment | What You'll Build | Time |
-|---|-----------|-------------------|------|
-| 00 | [Getting Started](experiments/00-getting-started/) | A landing page — your first project built entirely by prompting | 20 min |
-| 01 | [Steering Claude Code](experiments/01-steering-claude-code/) | A calculator, bookmark manager, and portfolio — learning to control what Claude does | 45 min |
-| 02 | [Debugging & Fixing](experiments/02-debugging-and-fixing/) | Fix broken projects by pasting errors and iterating | 45 min |
-| 03 | [CLAUDE.md Mastery](experiments/03-claude-md-mastery/) | Project config files that keep Claude informed and up to date | 45 min |
-| 04 | [Context & Memory](experiments/04-context-and-memory/) | A notes app, habit tracker, and recipe book — built across multiple sessions | 1 hr |
-| 05 | [Custom Agents](experiments/05-custom-agents/) | Specialist AI agents that review, audit, and plan — then auto-run when needed | 1-2 hrs |
-| 06 | [Skills & Commands](experiments/06-skills-and-commands/) | Reusable workflows — a project scaffolder, landing page generator | 1-1.5 hrs |
-| 07 | [Connecting External Tools](experiments/07-connecting-external-tools/) | Give Claude access to GitHub, databases, and other services | 45 min |
-| 08 | [Multi-Agent Teams](experiments/08-multi-agent-teams/) | Multiple AI agents working together on a single project | 1-2 hrs |
-| 09 | [Putting It All Together](experiments/09-putting-it-all-together/) | A capstone combining agents, skills, and tools into one workflow | 3-5 hrs |
-
-**Total: ~12-17 hours** from first install to multi-agent systems.
-
 ## Quick Start
 
 ### 1. Install Claude Code

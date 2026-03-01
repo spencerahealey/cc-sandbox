@@ -91,4 +91,4 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-Built by [Spencer Healey](https://x.com/SpencerHea70687) · [Healey AI](https://healeyai.com)
+Built by [Spencer Healey](https://x.com/SpencerHea70687) · [YouTube](https://www.youtube.com/@spencerahealey) · [Healey AI](https://healeyai.com)
